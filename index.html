@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign in – Gmail</title>
+  <link rel="icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 360px;
+      margin: 100px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+    }
+    img {
+      height: 24px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error-message {
+      display: none;
+      color: red;
+      margin-top: 20px;
+    }
+    .terminal {
+      display: none;
+      background: black;
+      color: lime;
+      font-family: monospace;
+      padding: 20px;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="login-box">
+    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail Logo"/>
+    <h1>Sign in</h1>
+    <form id="login-form">
+      <input type="email" placeholder="Email or phone" required />
+      <input type="password" placeholder="Enter your password" required />
+      <button type="submit">Next</button>
+      <p class="error-message" id="error-text">Oops! Something went wrong. Please try again later.</p>
+    </form>
+  </div>
+
+  <div class="terminal" id="terminal-screen">
+    <pre>
+Initializing...
+Connecting to secure node...
+Reading encrypted packets...
+Bypassing authorization...
+Authentication key: 0x4f2g6a9...
+Session compromised...
+Dumping credentials...
+CLOSE IN 3...
+    </pre>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('error-text').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('login-box').style.display = 'none';
+        document.getElementById('terminal-screen').style.display = 'block';
+      }, 2500);
+
+      setTimeout(() => {
+        window.close();
+      }, 22000);
+    });
+  </script>
+</body>
+</html>
