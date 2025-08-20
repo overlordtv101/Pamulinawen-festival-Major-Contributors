@@ -1,2 +1,2 @@
-# phishing-awareness
+# Pamulinawen festival Major contributors
 School project 
