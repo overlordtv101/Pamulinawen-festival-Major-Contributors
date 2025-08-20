@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign in – Gmail</title>
-  <link rel="icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pamulinawen Festival — Credits & Contributors</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --card:#111827;      /* gray-900 */
+      --muted:#94a3b8;     /* slate-400 */
+      --text:#e5e7eb;      /* gray-200 */
+      --accent:#f59e0b;    /* amber-500 */
+      --link:#93c5fd;      /* blue-300 */
+      --chip:#1f2937;      /* gray-800 */
     }
-    .container {
-      max-width: 360px;
-      margin: 100px auto;
-      background: white;
-      padding: 40px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:radial-gradient(1200px 800px at 10% -10%, #1e293b 0,#0f172a 60%);
+      color:var(--text); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
     }
-    img {
-      height: 24px;
-      margin-bottom: 20px;
+    header{
+      padding:48px 20px 12px; text-align:center;
     }
-    h1 {
-      font-size: 24px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .error-message {
-      display: none;
-      color: red;
-      margin-top: 20px;
-    }
-    .terminal {
-      display: none;
-      background: black;
-      color: lime;
-      font-family: monospace;
-      padding: 20px;
-      height: 100vh;
-    }
+    h1{margin:0 0 6px; font-size:clamp(24px,4vw,40px); letter-spacing:.3px}
+    .tagline{color:var(--muted); font-size:clamp(14px,2.4vw,18px)}
+    main{max-width:980px; margin:24px auto 72px; padding:0 18px}
+    section{background:var(--card); border:1px solid #1f2937; border-radius:18px; padding:22px; margin:18px 0 22px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h2{margin:0 0 10px; font-size:clamp(18px,3vw,24px)}
+    p.desc{margin:0 0 16px; color:var(--muted)}
+    ul{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px}
+    li{background:var(--chip); border:1px solid #283142; border-radius:12px; padding:12px 14px}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .small{font-size:13px; color:var(--muted)}
+    footer{max-width:980px; margin:16px auto 48px; padding:0 18px; color:var(--muted); font-size:14px}
+    .badge{display:inline-block; background:#3f2e00; color:#ffd166; padding:3px 8px; border-radius:999px; font-size:12px; margin-left:6px}
   </style>
 </head>
 <body>
-  <div class="container" id="login-box">
-    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail Logo"/>
-    <h1>Sign in</h1>
-    <form id="login-form">
-      <input type="email" placeholder="Email or phone" required />
-      <input type="password" placeholder="Enter your password" required />
-      <button type="submit">Next</button>
-      <p class="error-message" id="error-text">Oops! Something went wrong. Please try again later.</p>
-    </form>
-  </div>
+  <header>
+    <h1>Pamulinawen Festival — Credits & Contributors</h1>
+    <div class="tagline">Acknowledging key organizers, information sources, and image providers</div>
+  </header>
 
-  <div class="terminal" id="terminal-screen">
-    <pre>
-Initializing...
-Connecting to secure node...
-Reading encrypted packets...
-Bypassing authorization...
-Authentication key: 0x4f2g6a9...
-Session compromised...
-Dumping credentials...
-CLOSE IN 3...
-    </pre>
-  </div>
+  <main>
+    <section>
+      <h2>Official Organizers & Government</h2>
+      <p class="desc">Primary institutions connected to the festival’s staging, tourism promotion, and heritage work.</p>
+      <ul>
+        <li><a href="https://laoagcity.gov.ph/" target="_blank" rel="noopener">City Government of Laoag</a> <span class="badge">Official</span></li>
+        <li><a href="https://ilocosnorte.gov.ph/" target="_blank" rel="noopener">Provincial Government of Ilocos Norte</a></li>
+        <li><a href="https://www.tourism.gov.ph/" target="_blank" rel="noopener">Department of Tourism — Philippines</a></li>
+        <li><a href="https://www.facebook.com/DOTR1/" target="_blank" rel="noopener">Department of Tourism — Region I (Ilocos)</a></li>
+        <li><a href="https://www.facebook.com/SaintWilliamParishLaoag/" target="_blank" rel="noopener">Saint William the Hermit Parish — Laoag</a></li>
+      </ul>
+    </section>
 
-  <script>
-    document.getElementById('login-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('error-text').style.display = 'block';
-      setTimeout(() => {
-        document.getElementById('login-box').style.display = 'none';
-        document.getElementById('terminal-screen').style.display = 'block';
-      }, 2500);
+    <section>
+      <h2>Government Media & News Coverage</h2>
+      <p class="desc">Festival articles, award rundowns, float parade results, and event highlights.</p>
+      <ul>
+        <li><a href="https://pia.gov.ph/" target="_blank" rel="noopener">Philippine Information Agency (PIA)</a></li>
+        <li><a href="https://www.pna.gov.ph/" target="_blank" rel="noopener">Philippine News Agency (PNA)</a></li>
+        <li><a href="https://mirror.pia.gov.ph/" target="_blank" rel="noopener">PIA Mirror (archives)</a></li>
+        <li><a href="https://ilocosnorte.gov.ph/news" target="_blank" rel="noopener">Ilocos Norte Newsroom</a></li>
+      </ul>
+    </section>
 
-      setTimeout(() => {
-        window.close();
-      }, 6000);
-    });
-  </script>
+    <section>
+      <h2>Encyclopedic & Festival Context</h2>
+      <p class="desc">Background on the festival’s origins, meaning, and national competitions.</p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Pamulinawen_Festival" target="_blank" rel="noopener">Pamulinawen Festival — Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Aliwan_Fiesta" target="_blank" rel="noopener">Aliwan Fiesta — Wikipedia</a></li>
+        <li><a href="https://laoagcity.gov.ph/tourism" target="_blank" rel="noopener">Laoag City Tourism Page</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Features, Blogs & Photo Essays</h2>
+      <p class="desc">Supplementary stories and image features used for general festival visuals.</p>
+      <ul>
+        <li><a href="https://blauearth.com/" target="_blank" rel="noopener">Blauearth (Ilocos photo essays)</a></li>
+        <li><a href="https://vigattintourism.com/tourism/articles/Pamulinawen-Festival" target="_blank" rel="noopener">Vigattin Tourism — Pamulinawen Feature</a></li>
+        <li><a href="https://yodisphere.com/2022/09/ilocos-norte-weaving-inabel/" target="_blank" rel="noopener">Yodisphere — Ilocos Inabel Weaving</a></li>
+        <li><a href="https://duldulao.net/" target="_blank" rel="noopener">Duldulao.net — Festival Float Coverage</a></li>
+        <li><a href="https://metrocebu.news/" target="_blank" rel="noopener">Metro Cebu News — Festival Recognition</a></li>
+        <li><a href="https://camella.com.ph/the-pamulinawen-festival-ilocos-norte/" target="_blank" rel="noopener">Camella — Pamulinawen Overview</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pattern & Textile References (for Backgrounds)</h2>
+      <p class="desc">Sources referenced for Ilocano weaving (inabel/binakol/pinilian) inspired slide patterns.</p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Inabel" target="_blank" rel="noopener">Inabel — Overview</a></li>
+        <li><a href="https://www.angpamana.com/textiles/textile-collection/luzon/ilocos" target="_blank" rel="noopener">Ang Pamana — Ilocos Textiles</a></li>
+        <li><a href="https://hibla.online/iteration2/an-enduring-thread/" target="_blank" rel="noopener">Hibla — An Enduring Thread</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notes on Usage</h2>
+      <p class="small">
+        Links above point to organizations and articles that informed the presentation and provided public photos or context.
+        For any third-party images used, please ensure you have the right to use them (public domain, permissive license, or explicit permission).
+        When possible, prefer official government media (PIA/PNA) and your own photos for safest reuse.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Built for the Pamulinawen Festival presentation. You may add or remove entries as your sources evolve.
+  </footer>
 </body>
 </html>
